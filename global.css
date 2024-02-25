@@ -1,0 +1,474 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+}
+
+body {
+    background: #FDFEFE;
+}
+
+header, header-menu__mobile, .header-menu__mobile__container, form, .back, .terms-group, .input-group, .footer-container, .footer-container__item, .contact-group {
+    display: flex;
+}
+
+header {
+    background: linear-gradient(to right, #1A5276, #009bbe);
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 100;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header-container {
+    padding: min(7%, 20px) min(7%, 70px);
+}
+
+.header-container h1 {
+    font-size: clamp(24px, 3.4vw, 4.8vh);
+}
+
+.header-menu__mobile {
+    padding: min(7%, 20px) min(7%, 70px);
+    align-self: center;
+    gap: 60px;
+}
+
+.header-menu__mobile a {
+    text-decoration: none;
+    font-size: 16px;
+    margin: auto;
+    padding: 0 0 0 10px;
+    color: #fff;
+}
+
+.header-menu__mobile a:hover {
+    color: #d6efff;
+}
+
+/* Estilos del menú */
+.bars__menu{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: max(5%, 18px);
+    right: max(7%, 20px);
+    /*transform: translate(-50%, -50%) scale(6);para que este en el medio y que se acerque*/
+    cursor: pointer;
+    display: none;
+}
+
+.bars__menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    margin: 6px 0 0 0;
+    border-radius: 2px;
+    transform-origin: 0px 100%;/*Al hacer la rotación los elementos se mueven hacia un lado, el -origin, sirve para que estos elementos no se muevan por medio del 0px y 100% para que se mantengan ambos*/
+    transition: all 300ms;
+}
+
+.activeline1__bars-menu{
+    transform: rotate(45deg) translate(-2px, 1px);/*rotate define la rotación de los elementos y el translate qué tanto se deben trasladar los elementos hasta formar la x*/
+}
+
+.activeline2__bars-menu{
+    opacity: 0;/*Para desaparecer el elemento*/
+    margin-left: -30px;/*y mientras desaparece se desplaza a la izquierda*/
+}
+
+.activeline3__bars-menu{
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+.header-menu__mobile__container {
+    gap: 60px;
+}
+
+.menu-group {
+    display: flex;
+    gap: 5px;
+    margin: auto;
+}
+
+
+main {
+    padding: min(35%, 160px) min(7%, 70px) 0 min(7%, 70px);
+}
+
+main h1 {
+    text-align: center;
+    font-size: clamp(20px, 3vw, 4.4vh);
+    padding: 20px 0;
+}
+
+.back {
+    padding: 0 0 20px 0;
+    gap: 10px;
+}
+
+.back a {
+    color: #858585;
+    font-size: clamp(12px, 1.8vw, 2.2vh);
+    margin: auto 0;
+}
+
+.back img {
+    color: #858585;
+    font-size: 12px;
+    margin: auto 0;
+}
+
+.services-description {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.services-description__item {
+    width: 30%;
+    min-width: 225px;
+    margin: 30px 0 0 0;
+    justify-content: center;
+    text-align: center;
+}
+.services-description__item-img {
+    width: 70%;
+    height: auto;
+}
+.services-description__item-title {
+    font-weight: bold;
+    font-size: clamp(16px, 2.8vw, 3.2vh);
+    padding: 15px 0 0 0;   
+    color: #000; 
+}
+.services-description__item-p {
+    font-weight: 300;
+    font-size: clamp(12px, 1.8vw, 2.2vh);
+    padding: 15px 0 0 0;
+    color: #000;
+}
+
+
+/* Estilos de los formularios */
+form {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 40px;
+}
+
+.form-img {
+    width: 70%;
+    height: 380px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    display: flex;
+}
+.form-img__img {
+    width: 100%; 
+    max-height: 320px; 
+    margin: auto;
+}
+
+.form-info {
+    padding: min(20%, 30px) min(20%, 30px);
+    width: 100%;
+}
+.form-info h3 {
+    color: #1A5276;
+    font-size: 20px;
+}
+
+label {
+    font-size: clamp(14px, 1.4vw, 1.8vh);
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 1px solid #858585;
+    outline: none;
+}
+
+input:focus {
+    border: none;
+    background: #e8e8e8;
+    border-radius: 20px;
+    padding: 0 10px;
+}
+
+.input-submit {
+    background: #1A5276;
+    padding: 5px 15px;
+    border-radius: 20px;
+    width: auto;
+    color: #fff;
+}
+.input-submit:focus {
+    border: 1px solid #1A5276;
+    
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.input-submit:hover {
+    background: #fff;
+    border: 1px solid #1A5276;
+    color: #1A5276;
+}
+
+.input-group {
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.password-group {
+    width: 100%;
+    flex-direction: column;
+}
+
+.terms-group {
+    gap: 10px; 
+    width: 100%; 
+    padding: 10px 0 20px 0;
+}
+
+.password, .terms, .privacy-date {
+    color: #858585;
+    font-size: clamp(10px, 1.8vw, 1.4vh);
+}
+
+.btn-first {
+    margin: 20px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    border: 1px solid #858585;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+footer {
+    background: linear-gradient(to right, #1A5276, #2E86C1);/*EAECEE*/
+    padding: min(7%, 20px) min(7%, 70px);
+    margin: min(37%, 120px) 0 0 0;
+}
+footer h1 {
+    font-size: clamp(24px, 3.4vw, 4.8vh);
+    color: #fff;
+}
+.footer-container {
+    padding: 40px 0;
+    justify-content: space-between;
+    gap: 20px;
+}
+.footer-container__item {
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-container__item a, p {
+    text-decoration: none;
+    color: #fff;
+    margin: auto 0;
+}
+.footer-container__item h2 {
+    font-size: clamp(18px, 2.2vw, 3.6vh);
+    padding: 10px 0;
+    color: #fff;
+}
+.footer-container__item p {
+    line-height: 40px;
+}
+.footer-container__item p:hover {
+    color: #d6efff;
+}
+.footer-container__item a:hover {
+    color: #d6efff;
+}
+.contact-group {
+    gap: 10px;
+}
+span p {
+    text-align: center;
+    padding: 5px;
+    background: linear-gradient(to right, #1A5276, #2E86C1);/*e5e2e2*/
+    font-size: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+
+.box {
+    height: auto;
+    width: clamp(238px, 72vw, 76vh);
+    background-color:#fff;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    /*box-shadow: 0 18px 22px -2px rgb(196, 196, 196); 
+    [primer valor] 0 (si se pone alguna medida se desplaza a la derecha), 
+    [segundo valor] 18px (se desplaza hacia abajo), 
+    [tercer valor] 22px aumenta el efecto "desvanecido", 
+    [cuarto valor] la manera en que se desplaza a los lados (?, 
+    el color, duh*/
+    color: #000;
+    padding: min(7%, 40px) min(7%, 30px);
+    position: absolute;
+}
+.us-h3 {
+    text-align: center;
+    font-size: 22px;
+    color: #1A5276;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 15px 0;
+}
+.box hr {
+    width: 100px;
+    padding: 2px;
+    border-radius: 10px;
+    background: #1A5276;
+    margin: 15px auto;
+}
+.us-p {
+    color: #000;
+    font-size: clamp(12px, 1.8vw, 2.2vh);
+    line-height: 20px;
+}
+.boxOne {
+    top: -150px;
+    left: min(7%, 70px);
+}
+.boxTwo {
+    right: min(7%, 70px);
+    bottom: -150px;
+}
+
+/* - - - about us - - - */
+.us {
+    padding: 200px 0 0 0;
+}
+.us-container {
+    background-image: url('img/us.jpg');
+    background-position: top;
+    background-attachment: fixed;
+    padding: min(35%, 160px) min(7%, 70px) 0 min(7%, 70px);
+    height: 600px;
+    position: relative;
+}
+.us-container__color {
+    background-color: #1a5376be;
+    height: 600px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.values-container {
+    background: #1A5276;
+    margin: 350px 0 150px 0;
+    padding: min(7%, 20px) min(7%, 70px);
+}
+.values-container__h3 {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+.values-container__values-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+.values-cards__card {
+    min-width: clamp(230px, 38vw, 42vh);/**/
+    width: 290px;
+    background: #fff;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 40px;
+    padding: min(7%, 40px) min(7%, 30px);
+    flex-grow: 1;
+}
+
+/* - - -  Privacy - - - */
+.privacy-h2 {
+    font-size: clamp(18px, 1.4vw, 2.8vh);
+    padding: 20px 0 10px 0;
+}
+.privacy-p {
+    color: #000;
+    font-size: clamp(14px, 1.2vw, 2.6vh);
+}
+
+/* Media queries */
+@media (max-width: 991px) {
+    .header-container {
+        width: 100%;
+    }
+
+    .bars__menu {
+        display: block;
+    }
+    .menu {
+        background: linear-gradient(to right, #1A5276, #2E86C1);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 65px;
+        display: none;
+    }
+    .header-menu__mobile__container {
+        display: flex;
+        width: 90%;
+        margin: 30px auto;
+        justify-content: center;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .header-menu__mobile__container a {
+        margin: 0;
+    }
+
+    .menu a {
+        display: block;
+    }
+
+    .menu__active {
+        display: block;
+    }
+
+
+    form {
+        flex-direction: column;
+    }
+    .form-img {
+        width: 100%;
+        height: auto;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 0;
+    }
+}
+
+@media (max-width: 565px) {
+    .header-container img {
+        display: none;
+    }
+    .footer-container  {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

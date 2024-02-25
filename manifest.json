@@ -1,0 +1,30 @@
+{
+    "name": "Organizer Task",
+    "short_name": "Organizer Task",
+    "theme_color": "#1A5276",
+    "background_color": "#1A5276",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "./",
+    "start_url": "./",
+    "icons": [
+        {
+            "src": "./img/icon-organizer-task.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "screenshots": [
+        {
+          "src": "./img/screenshot-desktop.png",
+          "sizes": "640x480",
+          "type": "image/png",
+          "form_factor": "ancho"
+        },
+        {
+          "src": "./img/screenshot-mobile.png",
+          "sizes": "360x640",
+          "type": "image/png"
+        }
+    ]
+}
